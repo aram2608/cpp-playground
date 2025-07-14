@@ -1,5 +1,5 @@
 // .cpp contain the main source code
-// g++ calculator/calculator.cpp calculator/main.cpp -o bin/calculator 
+// clang++ calculator/calculator.cpp calculator/main.cpp -o bin/calculator 
 // to compile, you need both files
 #include <iostream>
 #include "calculator.h"
