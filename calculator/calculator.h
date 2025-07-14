@@ -1,3 +1,4 @@
+// .h files declares what exists
 #ifndef CALCULATOR_H
 #define CALCULATOR_H
 
