@@ -17,6 +17,9 @@ int main() {
     // Boolean (true or false)
     bool student = true;
 
+    // Float
+    float e = 2.45;
+
     // strings are multiple characters
     std::string name = "Jerry";
 
@@ -26,5 +29,6 @@ int main() {
     std::cout << "Double: " << a << std::endl;
     std::cout << "Your grade is an: " << grade << std::endl;
     std::cout << "Your name is: " << name << std::endl;
+    std::cout << "This is a float: " << e << std::endl;
     return 0;
 }
