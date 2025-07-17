@@ -63,7 +63,7 @@ target_link_libraries(hello_fmt PRIVATE fmt::fmt)
 Step 7: Buil Project
 ```
 cd hello-fmt
-cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=$VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake
+cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=~/dev/tools/vcpkg/scripts/buildsystems/vcpkg.cmake
 cmake --build build
 ./bin/hello_fmt
 ```
