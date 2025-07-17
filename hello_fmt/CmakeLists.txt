@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.20)
+project(hello_fmt)
+
+# Use C++17 or newer
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Enable vcpkg integration if provided externally
+if(DEFINED ENV{VCPKG_ROOT})
+    set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+        CACHE STRING "")
+endif()
+
+# Define the executable
+add_executable(hello_fmt main.cpp)
+
+# Find and link fmt (assumes installed via vcpkg)
+find_package(fmt CONFIG REQUIRED)
+target_link_libraries(hello_fmt PRIVATE fmt::fmt)
