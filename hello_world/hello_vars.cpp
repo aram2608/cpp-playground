@@ -1,11 +1,11 @@
 #include <iostream>
 
 int main() {
-    int x; //variable declaration
+    int x; // variable declaration
     int y;
 
-    x = 5; //variable assignment
-    y = 6;
+    x     = 5; // variable assignment
+    y     = 6;
     int z = x + y;
 
     // double is a number plus a decimal

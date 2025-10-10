@@ -7,11 +7,11 @@ EITHER THAT OR INCLUDE A .h file.
 */
 
 namespace first {
-    int x = 1;
+int x = 1;
 }
 
 namespace second {
-    int x = 2;
+int x = 2;
 }
 
 void printer(int &a) {

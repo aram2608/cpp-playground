@@ -1,8 +1,8 @@
 #include <iostream>
-#include <memory>  // for std::unique_ptr
+#include <memory> // for std::unique_ptr
 
 class MyObject {
-public:
+  public:
     MyObject() {
         std::cout << "Constructor called for MyObject\n";
     }
@@ -15,7 +15,7 @@ public:
 };
 
 class OtherObject {
-public:
+  public:
     OtherObject() {
         std::cout << "Constructor called for OtherObject\n";
     }

@@ -7,7 +7,7 @@ int main() {
 
     // Using the conditional operator to find the maximum value
     // Lets you write single line if statements
-    max_val = (a > b) ? a : b; 
+    max_val = (a > b) ? a : b;
 
     std::cout << "The maximum value is: " << max_val << std::endl; // Output: 10
 

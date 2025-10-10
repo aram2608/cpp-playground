@@ -1,7 +1,8 @@
-#include <iostream>
 #include "circle_calc.h"
 
-void print_line(const std::string& msg) {
+#include <iostream>
+
+void print_line(const std::string &msg) {
     std::cout << msg << std::endl;
 }
 

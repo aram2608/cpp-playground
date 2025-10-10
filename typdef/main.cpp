@@ -19,8 +19,7 @@ int main() {
     */
 
     str_t first_name = "Javier";
-    num_t age = 24;
-
+    num_t age        = 24;
 
     cout << first_name << endl;
     cout << age << endl;

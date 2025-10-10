@@ -2,13 +2,11 @@
 #include <memory>
 
 class MyClass {
-public:
+  public:
     int member_var = 5;
     // In a class, we can use [this] to capture all member variables
     void do_something() {
-        auto lambda_this = [this]() {
-            std::cout << "Member var: " << member_var << std::endl;
-        };
+        auto lambda_this = [this]() { std::cout << "Member var: " << member_var << std::endl; };
         lambda_this();
     }
 };
@@ -42,8 +40,8 @@ int main() {
 
     // As of C++ 14 we can use [new_var = expression] to capture move only types
     // or perform complex initializations
-    std::unique_ptr<int> ptr = std::make_unique<int>(42);
-    auto lambda_init = [my_ptr = std::move(ptr)]() {
+    std::unique_ptr<int> ptr         = std::make_unique<int>(42);
+    auto                 lambda_init = [my_ptr = std::move(ptr)]() {
         std::cout << "Captured unique_ptr value: " << *my_ptr << std::endl;
     };
     lambda_init();

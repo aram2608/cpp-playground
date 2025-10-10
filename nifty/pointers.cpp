@@ -3,9 +3,9 @@ using std::cout;
 using std::endl;
 
 int main() {
-    int a = 42;        // plain int
-    int& r = a;        // reference (alias for a)
-    int* p = &a;       // pointer to a
+    int  a = 42; // plain int
+    int &r = a;  // reference (alias for a)
+    int *p = &a; // pointer to a
 
     cout << "a  = " << a << "   at address " << &a << endl;
     cout << "r  = " << r << "   at address " << &r << endl;

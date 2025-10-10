@@ -104,7 +104,7 @@ int main() {
     // references, pointers are more common
 
     // We need to initalize an array of Element pointers
-    Element               *array_items[] = {&a, &b};
+    Element *array_items[] = {&a, &b};
     // We can do the same with a vector of pointers
     std::vector<Element *> vect_items{&a, &b};
     ConcreteVisitor1       v1;

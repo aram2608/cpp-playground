@@ -30,7 +30,7 @@ void fib(int n) {
     int curr;
 
     for (int i = 2; i <= n; i++) {
-        curr = prev2 + prev1;
+        curr  = prev2 + prev1;
         prev1 = prev2;
         prev2 = curr;
     }

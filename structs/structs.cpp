@@ -1,37 +1,37 @@
 #include <iostream>
 
 namespace HR {
-    struct Employee {
-        std::string name;
-        int age;
-    };
+struct Employee {
+    std::string name;
+    int         age;
+};
 
-    struct AutoEmployee {
-        AutoEmployee(std::string name, int age) : name(name), age(age) {};
-        std::string name;
-        int age;
-    };
+struct AutoEmployee {
+    AutoEmployee(std::string name, int age) : name(name), age(age) {};
+    std::string name;
+    int         age;
+};
 
-    struct PointerEmployee {
-        PointerEmployee(std::string name, int age) : name(name), age(age) {
-            std::cout << "Creating object and allocating memory." << std::endl;
-            *ptr = 40;
-        };
-        ~PointerEmployee() {
-            std::cout << "Destroying object and deallocating memeory." << std::endl;
-            delete ptr;
-        };
-        std::string name;
-        int age;
-        int * ptr = new int;
+struct PointerEmployee {
+    PointerEmployee(std::string name, int age) : name(name), age(age) {
+        std::cout << "Creating object and allocating memory." << std::endl;
+        *ptr = 40;
     };
-}
+    ~PointerEmployee() {
+        std::cout << "Destroying object and deallocating memeory." << std::endl;
+        delete ptr;
+    };
+    std::string name;
+    int         age;
+    int        *ptr = new int;
+};
+} // namespace HR
 
 int main() {
     // Designated initializers
-    HR::Employee me {
+    HR::Employee me{
         .name = "Javier",
-        .age = 24,
+        .age  = 24,
     };
 
     // Initalized using a defined constructor

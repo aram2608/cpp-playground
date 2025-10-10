@@ -1,5 +1,5 @@
-#include <iostream>
 #include <ctime>
+#include <iostream>
 #include <random>
 
 int main() {
@@ -7,7 +7,7 @@ int main() {
     // Initializing it with the current time ensures that the numbers are always
     // hard to predict
     std::random_device rd;
-    std::mt19937 rng(std::time(nullptr));
+    std::mt19937       rng(std::time(nullptr));
     // A better and higher quality way is to use a random_device
     std::mt19937 rng2(rd());
 

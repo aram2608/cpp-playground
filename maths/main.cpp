@@ -13,14 +13,14 @@ int main() {
     cout << students << endl;
 
     // Increment operator
-    students ++;
+    students++;
 
     cout << students << endl;
 
     // Subtraction, same pattern as addition
     students -= 1;
     // Decrement operation
-    students --;
+    students--;
 
     cout << students << endl;
 
@@ -37,11 +37,10 @@ int main() {
     // Modulo op same as Python
     int num = 6;
     int rem = num % 2;
-    if ( rem == 0 ) {
-    cout << "Even" << endl;
-    }
-    else {
-    cout << "Odd" << endl;
+    if (rem == 0) {
+        cout << "Even" << endl;
+    } else {
+        cout << "Odd" << endl;
     }
     return 0;
 }
