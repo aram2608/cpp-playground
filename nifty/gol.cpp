@@ -6,7 +6,7 @@ enum CellState { DEAD, ALIVE };
 
 // Function to count living neighbors
 int countLivingNeighbors(
-    const std::vector<std::vector<CellState>> &grid, int row, int col, int rows, int cols) {
+    const std::vector<std::vector<CellState>>& grid, int row, int col, int rows, int cols) {
     int livingNeighbors = 0;
     // Iterate through the 8 neighbors (Moore neighborhood)
     for (int i = -1; i <= 1; ++i) {
@@ -26,7 +26,7 @@ int countLivingNeighbors(
 }
 
 // Function to update the grid for one generation
-void updateGrid(std::vector<std::vector<CellState>> &currentGrid, int rows, int cols) {
+void updateGrid(std::vector<std::vector<CellState>>& currentGrid, int rows, int cols) {
     std::vector<std::vector<CellState>> nextGrid = currentGrid; // Create a copy for next generation
 
     for (int r = 0; r < rows; ++r) {
@@ -48,7 +48,7 @@ void updateGrid(std::vector<std::vector<CellState>> &currentGrid, int rows, int 
 }
 
 // Function to print the grid
-void printGrid(const std::vector<std::vector<CellState>> &grid, int rows, int cols) {
+void printGrid(const std::vector<std::vector<CellState>>& grid, int rows, int cols) {
     for (int r = 0; r < rows; ++r) {
         for (int c = 0; c < cols; ++c) {
             std::cout << (grid[r][c] == ALIVE ? 'X' : ' ') << " ";

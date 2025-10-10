@@ -15,8 +15,8 @@ class ConcreteElementB;
 
 class Visitor {
   public:
-    virtual void visitConcreteElementA(ConcreteElementA &element) = 0;
-    virtual void visitConcreteElementB(ConcreteElementB &element) = 0;
+    virtual void visitConcreteElementA(ConcreteElementA& element) = 0;
+    virtual void visitConcreteElementB(ConcreteElementB& element) = 0;
 };
 
 /*
@@ -27,7 +27,7 @@ class Visitor {
 
 class Element {
   public:
-    virtual void accept(Visitor &visitor) = 0;
+    virtual void accept(Visitor& visitor) = 0;
 };
 
 /*
@@ -38,7 +38,7 @@ class Element {
 
 class ConcreteElementA : public Element {
   public:
-    void accept(Visitor &visitor) override {
+    void accept(Visitor& visitor) override {
         /*
          * Note that we're calling `visitConcreteElementA`, which matches the
          * current class name. This way we let the visitor know the class of the
@@ -54,7 +54,7 @@ class ConcreteElementA : public Element {
 
 class ConcreteElementB : public Element {
   public:
-    void accept(Visitor &visitor) override {
+    void accept(Visitor& visitor) override {
         visitor.visitConcreteElementB(*this);
     }
     std::string ExclusiveMethodOfConcreteElementB() const {
@@ -74,11 +74,11 @@ class ConcreteElementB : public Element {
 
 class ConcreteVisitor1 : public Visitor {
   public:
-    void visitConcreteElementA(ConcreteElementA &element) override {
+    void visitConcreteElementA(ConcreteElementA& element) override {
         std::cout << element.ExclusiveMethodOfConcreteElementA() << " ConcreteVisitor1."
                   << std::endl;
     }
-    void visitConcreteElementB(ConcreteElementB &element) override {
+    void visitConcreteElementB(ConcreteElementB& element) override {
         std::cout << element.ExclusiveMethodOfConcreteElementB() << " ConcreteVisitor1."
                   << std::endl;
     }
@@ -86,11 +86,11 @@ class ConcreteVisitor1 : public Visitor {
 
 class ConcreteVisitor2 : public Visitor {
   public:
-    void visitConcreteElementA(ConcreteElementA &element) override {
+    void visitConcreteElementA(ConcreteElementA& element) override {
         std::cout << element.ExclusiveMethodOfConcreteElementA() << " ConcreteVisitor2."
                   << std::endl;
     }
-    void visitConcreteElementB(ConcreteElementB &element) override {
+    void visitConcreteElementB(ConcreteElementB& element) override {
         std::cout << element.ExclusiveMethodOfConcreteElementB() << " ConcreteVisitor2."
                   << std::endl;
     }
@@ -104,23 +104,23 @@ int main() {
     // references, pointers are more common
 
     // We need to initalize an array of Element pointers
-    Element *array_items[] = {&a, &b};
+    Element* array_items[] = {&a, &b};
     // We can do the same with a vector of pointers
-    std::vector<Element *> vect_items{&a, &b};
-    ConcreteVisitor1       v1;
-    ConcreteVisitor2       v2;
+    std::vector<Element*> vect_items{&a, &b};
+    ConcreteVisitor1      v1;
+    ConcreteVisitor2      v2;
 
     // Will pick the correct visit method at runtime
-    for (Element *e : array_items)
+    for (Element* e : array_items)
         e->accept(v1);
 
-    for (Element *e : array_items)
+    for (Element* e : array_items)
         e->accept(v2);
 
-    for (Element *e : vect_items)
+    for (Element* e : vect_items)
         e->accept(v1);
 
-    for (Element *e : vect_items)
+    for (Element* e : vect_items)
         e->accept(v2);
     return 0;
 }

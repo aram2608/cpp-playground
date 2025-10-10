@@ -18,7 +18,7 @@ int main() {
     }
 
     // We create a new pointer to an int
-    int *ptr = new int;
+    int* ptr = new int;
     // We can then assign it a value
     *ptr = 10;
 
@@ -43,7 +43,7 @@ int main() {
     std::generate(arr.begin(), arr.end(), [&]() { return value++; });
 
     // We can return the address of an object using the address of operator &
-    for (auto &val : arr) {
+    for (auto& val : arr) {
         std::cout << "I am the array value at: " << &val << " Value: " << val << std::endl;
     }
     return 0;

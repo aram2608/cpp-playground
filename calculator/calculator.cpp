@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-void print_line(const std::string &msg) {
+void print_line(const std::string& msg) {
     std::cout << msg << std::endl;
 }
 
@@ -15,7 +15,7 @@ void greeter() {
     print_line("4) Divide");
 }
 
-void get_two_numbers(int &a, int &b) {
+void get_two_numbers(int& a, int& b) {
     std::cout << "Enter two numbers: ";
     std::cin >> a >> b;
 }

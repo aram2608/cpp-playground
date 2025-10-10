@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-void print_line(const std::string &msg) {
+void print_line(const std::string& msg) {
     std::cout << msg << std::endl;
 }
 
@@ -13,7 +13,7 @@ void greeter() {
     print_line("2) Area.");
 }
 
-void get_number(double &a) {
+void get_number(double& a) {
     std::cout << "Enter the radius of the circle: ";
     std::cin >> a;
 }

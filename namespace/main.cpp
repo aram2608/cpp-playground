@@ -14,7 +14,7 @@ namespace second {
 int x = 2;
 }
 
-void printer(int &a) {
+void printer(int& a) {
     // Saves from having to use repetive lines
     using std::cout;
     using std::endl;

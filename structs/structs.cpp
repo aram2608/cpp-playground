@@ -23,7 +23,7 @@ struct PointerEmployee {
     };
     std::string name;
     int         age;
-    int        *ptr = new int;
+    int*        ptr = new int;
 };
 } // namespace HR
 
