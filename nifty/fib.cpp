@@ -16,23 +16,25 @@ void printer(int og, int num2) {
     }
 }
 
-void fib(int range) {
-    int og = range;
+void fib(int n) {
     // Any number bigger than this overflows
-    if (range >= 95) {
+    if (n >= 95) {
         cout << "Overflow, exiting..." << endl;
+        return;
+    } else if (n <= 1) {
+        printer(n, n);
         return;
     }
 
-    long long num1 = 0;
-    long long num2 = 1;
-    while (range > 1) {
-        range--;
-        long long num3 = num2;
-        num2           = num1 + num2;
-        num1           = num3;
+    int prev2 = 1, prev1 = 0;
+    int curr;
+
+    for (int i = 2; i <= n; i++) {
+        curr = prev2 + prev1;
+        prev1 = prev2;
+        prev2 = curr;
     }
-    printer(og, num2);
+    printer(n, curr);
 }
 
 int main() {
