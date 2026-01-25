@@ -46,5 +46,10 @@ int main() {
     };
     lambda_init();
 
+    // Lambas with empty captures have the same signature as a function pointer
+    // void (*functionptr)(object)
+
+    // If a value is capture 
+
     return 0;
 }
